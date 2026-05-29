@@ -1,0 +1,17 @@
+<svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Canonical ViePOS dashboard shell reference">
+  <rect width="1440" height="1024" fill="#F2F3ED"/>
+  <rect width="225" height="1024" fill="#143D00"/>
+  <rect x="225" width="1215" height="60" fill="#FFFFFF"/>
+  <rect x="225" y="60" width="1215" height="964" fill="#F2F3ED"/>
+  <rect x="10" y="92" width="205" height="40" rx="5" fill="#256E05"/>
+  <rect x="10" y="972" width="205" height="52" fill="#256E05"/>
+  <rect x="286" y="11" width="262" height="38" rx="19" fill="#FFFFFF" stroke="#D3D3D3"/>
+  <rect x="249" y="92" width="354" height="112" rx="8" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <rect x="249" y="228" width="354" height="154" rx="8" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <rect x="627" y="228" width="354" height="154" rx="8" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <rect x="1005" y="228" width="354" height="154" rx="8" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <text x="24" y="48" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">ViePOS</text>
+  <text x="64" y="117" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600">Active navigation</text>
+  <text x="321" y="36" fill="#878787" font-family="Inter, Arial, sans-serif" font-size="14">Search pill 262x38</text>
+  <text x="249" y="80" fill="#292929" font-family="Inter, Arial, sans-serif" font-size="14">Main content starts below 60px topbar and right of 225px sidebar</text>
+</svg>

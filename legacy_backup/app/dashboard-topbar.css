@@ -1,0 +1,134 @@
+.dashboard-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  grid-column: 2;
+  display: flex;
+  height: var(--dashboard-topbar-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 22px;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(20, 61, 0, 0.08);
+}
+
+.dashboard-topbar-left,
+.dashboard-topbar-right {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-menu-button,
+.dashboard-topbar-logo {
+  display: none;
+}
+
+.dashboard-icon-button {
+  display: inline-grid;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  color: #4d5b48;
+  background: transparent;
+}
+
+.dashboard-icon-button:hover {
+  background: #f2f3ed;
+  color: var(--brand-dark);
+}
+
+.dashboard-icon-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.dashboard-search {
+  display: flex;
+  width: 262px;
+  height: 38px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border: 1px solid #d3d3d3;
+  border-radius: 19px;
+  background: #ffffff;
+}
+
+.dashboard-search svg {
+  width: 17px;
+  height: 17px;
+  color: #878787;
+}
+
+.dashboard-search input {
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.dashboard-user-menu {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 9px;
+  padding-left: 12px;
+  border-left: 1px solid var(--border-light);
+}
+
+.dashboard-user-avatar {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  background: var(--dashboard-active-bg);
+}
+
+.dashboard-user-copy {
+  display: grid;
+  min-width: 0;
+  line-height: 1.2;
+}
+
+.dashboard-user-copy strong,
+.dashboard-user-copy small {
+  overflow: hidden;
+  max-width: 160px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-user-copy strong {
+  font-size: 14px;
+}
+
+.dashboard-user-copy small {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.dashboard-logout {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid var(--brand-dark);
+  border-radius: 6px;
+  color: var(--brand-dark);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  background: #ffffff;
+}

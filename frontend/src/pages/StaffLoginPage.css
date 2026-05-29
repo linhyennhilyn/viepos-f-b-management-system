@@ -1,0 +1,256 @@
+.staff-login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #F2F3ED; /* Light grey background for desktop */
+}
+
+.staff-login-card {
+  width: 100%;
+  max-width: 480px;
+  background-color: white;
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 481px) {
+  .staff-login-card {
+    min-height: auto;
+    max-height: 90vh; /* Prevent overflowing viewport */
+    overflow-y: auto; /* Scroll if content is too long */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin: 20px;
+    padding: 32px;
+  }
+  
+  /* Custom scrollbar for the card */
+  .staff-login-card::-webkit-scrollbar {
+    width: 6px;
+  }
+  .staff-login-card::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+}
+
+.staff-login-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the title */
+  margin-bottom: 10px;
+  position: relative; /* For absolute positioning of the back button */
+}
+
+.staff-back-btn {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #256E05;
+  color: #256E05;
+  padding: 0;
+  position: absolute; /* Take out of flow so title is perfectly centered */
+  left: 0;
+}
+
+.staff-back-btn:hover {
+  background-color: #f0f8ec;
+}
+
+.staff-login-title {
+  font-size: 1.25rem; /* 20px, specifically requested by user */
+  font-weight: 700;
+  color: #256E05; /* Updated back to lighter green */
+  margin: 0;
+}
+
+.staff-form-group {
+  margin-bottom: 22px; /* Increased to fit absolute error message without overlap */
+  position: relative;
+}
+
+.staff-form-group label {
+  display: block;
+  font-size: 0.75rem; /* 12px Body text */
+  font-weight: 500;
+  color: #256E05; /* Updated back to lighter green */
+  margin-bottom: 8px; /* Reduced from 12px */
+}
+
+.staff-email-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.staff-email-input-wrapper input {
+  width: 100%;
+  padding: 14px; /* Reduced padding slightly to fit 14px text better */
+  padding-right: 40px; /* Space for X icon */
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.75rem; /* 12px Body text */
+  color: #333;
+  outline: none;
+  transition: box-shadow 0.2s;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+.staff-email-input-wrapper input:focus {
+  box-shadow: 0 0 0 2px rgba(60, 176, 24, 0.3);
+}
+
+.staff-clear-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.staff-clear-btn:hover {
+  color: #333;
+}
+
+.staff-pin-grid {
+  display: flex;
+  gap: 8px; /* Reduced gap to prevent overflow */
+  justify-content: space-between;
+  width: 100%;
+}
+
+.staff-pin-input {
+  flex: 1; /* Allow flexible shrinking */
+  width: 0; /* Important for flex: 1 to work properly */
+  min-width: 0; /* Prevent input from pushing past bounds */
+  max-width: 52px; /* Don't get too large on big screens */
+  aspect-ratio: 5/6; /* Keep it nicely rectangular */
+  border: none;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  outline: none;
+  transition: box-shadow 0.2s, background-color 0.2s;
+  padding: 0; /* Avoid padding pushing size */
+}
+
+.staff-pin-input:focus {
+  box-shadow: 0 0 0 2px rgba(60, 176, 24, 0.5);
+  background-color: #fff;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.staff-pin-input::-webkit-outer-spin-button,
+.staff-pin-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.staff-pin-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.staff-modal-input {
+  width: 100%;
+  padding: 14px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #333;
+  outline: none;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.staff-modal-input:focus {
+  border-color: #256E05;
+  box-shadow: 0 0 0 2px rgba(60, 176, 24, 0.2);
+}
+
+.staff-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px; /* Reduced from 32px */
+  font-size: 0.75rem; /* 12px Caption */
+}
+
+.staff-fast-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  cursor: pointer;
+}
+
+.staff-fast-login input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #256E05;
+}
+
+.staff-forgot-pin {
+  color: #3CB018;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.staff-forgot-pin:hover {
+  text-decoration: underline;
+}
+
+.staff-submit-btn {
+  width: 100%;
+  padding: 14px; /* Reduced slightly */
+  background-color: #256E05;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem; /* 16px Button */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 0px;
+}
+
+.staff-submit-btn:hover {
+  background-color: #3CB018;
+}
+
+.staff-footer {
+  text-align: center;
+  font-size: 0.75rem; /* 12px Caption */
+  color: #333;
+  margin-top: auto;
+}
+
+.staff-footer a {
+  color: #256E05;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.staff-footer a:hover {
+  text-decoration: underline;
+}

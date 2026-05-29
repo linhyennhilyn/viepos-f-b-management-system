@@ -1,0 +1,150 @@
+.login-inner-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.login-header h2 {
+  color: #2E5F2B;
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.login-title {
+  color: #2E5F2B;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-group label {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem; /* space for right icon */
+  border: none;
+  border-radius: 8px;
+  background-color: #F5F5F5;
+  font-size: 0.95rem;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.input-wrapper input:focus {
+  background-color: #EAEAEA;
+}
+
+.input-icon-right {
+  position: absolute;
+  right: 1rem;
+  width: 13px;
+  height: 13px;
+  object-fit: contain;
+  color: #888;
+  cursor: pointer;
+  z-index: 2;
+  pointer-events: all;
+  user-select: none;
+}
+
+.login-error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin: 0;
+  text-align: center;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #256E05;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.login-btn:hover {
+  background-color: #3CB018;
+}
+
+.login-btn:disabled {
+  background-color: #789c77;
+  cursor: not-allowed;
+}
+
+.login-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-fast-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  cursor: pointer;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 0;
+}
+
+.forgot-password a {
+  color: #555;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  color: #256E05;
+}
+
+.login-footer {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}

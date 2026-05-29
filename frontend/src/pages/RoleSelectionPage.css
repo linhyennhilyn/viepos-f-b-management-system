@@ -1,0 +1,114 @@
+.role-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.role-logo-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.role-logo-img {
+  height: 2.4rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.role-logo-header span {
+  color: #2E5F2B;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.role-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.role-illustration {
+  width: 100%;
+  max-width: 250px;
+  height: 200px;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.role-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.role-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #256E05;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.role-btn:hover {
+  background-color: #3CB018;
+}
+
+.role-btn svg,
+.role-btn-icon {
+  position: absolute;
+  left: 1.5rem;
+}
+
+.role-btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.role-divider {
+  text-align: center;
+  color: #888;
+  font-size: 0.85rem;
+  margin: 0.2rem 0;
+}
+
+.role-register {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.role-register a {
+  color: #4CAF50;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.role-register a:hover {
+  color: #2E5F2B;
+}
+
+@media (max-width: 768px) {
+  .role-subtitle {
+    font-size: 0.85rem;
+  }
+}

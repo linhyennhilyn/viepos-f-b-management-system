@@ -1,0 +1,42 @@
+.auth-layout-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+}
+
+.auth-left-panel {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.auth-right-panel {
+  flex: 1;
+  background-color: #F2F3ED;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.auth-logo-corner {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  height: 2rem;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .auth-left-panel {
+    display: none;
+  }
+  .auth-logo-corner {
+    display: none;
+  }
+}

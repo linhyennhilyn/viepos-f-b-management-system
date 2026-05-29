@@ -1,0 +1,11 @@
+@import './dashboard-shell.css';
+@import './dashboard-topbar.css';
+@import './dashboard-content.css';
+@import './dashboard-responsive.css';
+
+.dashboard-shell {
+  --dashboard-sidebar-width: 225px;
+  --dashboard-topbar-height: 60px;
+  --dashboard-sidebar-bg: #143d00;
+  --dashboard-active-bg: #256e05;
+}

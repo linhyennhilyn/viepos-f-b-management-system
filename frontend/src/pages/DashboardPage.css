@@ -1,0 +1,110 @@
+.report-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.report-title {
+  color: #2E5F2B;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.report-card {
+  /* background-color: white; */
+  /* border-radius: 8px; */
+  /* padding: 40px 24px; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.03); */
+  color: #111;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.report-filter-row {
+  width: 100%;
+}
+
+.report-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .report-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .report-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-tab {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.admin-tab:hover {
+  color: #333;
+}
+
+.admin-tab.active {
+  color: #256E05;
+  border-bottom: 3px solid #256E05;
+}
+
+.admin-tab .badge {
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.btn-approve {
+  background-color: transparent;
+  color: #256E05;
+  border: 1px solid #256E05;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-approve:hover {
+  background-color: #e8f5e9;
+}
+
+.btn-reject {
+  background-color: transparent;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-reject:hover {
+  background-color: #ffe6e6;
+}

@@ -1,0 +1,246 @@
+.pos-account-container {
+  padding: 16px 16px 85px 16px; /* 85px để né BottomNav cố định */
+  background-color: #f4f6f3;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Cấm cuộn */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.pos-account-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 16px 0;
+}
+
+.account-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-camera-btn {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background-color: #306B0E;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+.profile-id {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.profile-id span {
+  color: #306B0E;
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+.role-card {
+  background-color: #edf5ea;
+  border: 1px solid #dcedd9;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.role-icon-wrapper {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #306B0E;
+}
+
+.role-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 2px;
+}
+
+.role-desc {
+  font-size: 11px;
+  color: #666;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.section-content {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 8px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #111;
+  font-weight: 600;
+}
+
+.info-icon-wrapper {
+  width: 24px;
+  height: 24px;
+  background-color: #f1f8e9;
+  color: #306B0E;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-value {
+  font-size: 13px;
+  color: #306B0E;
+  font-weight: 500;
+}
+
+.info-value.gray {
+  color: #666;
+  font-weight: 400;
+}
+
+.action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.action-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.action-icon-wrapper {
+  color: #306B0E;
+}
+
+.action-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 2px;
+}
+
+.action-desc {
+  font-size: 10px;
+  color: #888;
+}
+
+.logout-btn {
+  background-color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #d32f2f;
+  font-size: 15px;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}

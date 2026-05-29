@@ -1,0 +1,289 @@
+.pos-inventory-container {
+  padding: 16px 16px 100px 16px; /* Bottom padding for BottomNav */
+  background-color: #f6f7f2; /* Light grayish-green background matching mockup */
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent body scroll */
+}
+
+/* Search Bar */
+.pos-inventory-search-bar {
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.pos-inventory-search-input-wrapper {
+  display: flex;
+  gap: 12px;
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 4px 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  flex: 1;
+}
+
+.pos-inventory-search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+
+.pos-inventory-search-input-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  background: transparent;
+  padding: 10px;
+  min-width: 0;
+}
+
+.pos-inventory-search-input-wrapper input::placeholder {
+  color: #b0b0b0;
+}
+
+.clear-search-btn {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+/* .filter-btn {
+  background-color: #349409;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(52, 148, 9, 0.3);
+  margin-top: 2px;
+  margin-right: 2px;
+  flex-shrink: 0;
+} */
+
+/* Cards */
+.pos-inventory-cards {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.inv-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  border: 1.5px solid transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.inv-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.pos-inventory-cards.has-filter .inv-card:not(.active) {
+  opacity: 0.5;
+  filter: grayscale(60%);
+  border-color: transparent !important;
+}
+
+.pos-inventory-cards.has-filter .inv-card.active {
+  transform: scale(1.02);
+}
+
+.inv-card-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.inv-card-title {
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.inv-card-number {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Safe Card */
+.safe-card {
+  border-color: #3b9016;
+}
+.safe-card .inv-card-icon {
+  background-color: #e8f5e9;
+  color: #3b9016;
+}
+.safe-card .inv-card-number {
+  color: #3b9016;
+}
+
+/* Warning Card */
+.warning-card {
+  border-color: #f59e0b;
+}
+.warning-card .inv-card-icon {
+  background-color: #fef3c7;
+  color: #f59e0b;
+}
+.warning-card .inv-card-number {
+  color: #f59e0b;
+}
+
+/* Danger Card */
+.danger-card {
+  border-color: #dc2626;
+}
+.danger-card .inv-card-icon {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+.danger-card .inv-card-number {
+  color: #dc2626;
+}
+
+/* Table Container */
+.pos-inventory-table-container {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.03);
+}
+
+.pos-inventory-table-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.pos-inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Sticky Header */
+.pos-inventory-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.inv-th {
+  background-color: #2b6a0f;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 12px 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.inv-th-name { text-align: left; padding-left: 16px; width: 35%; }
+.inv-th-category { width: 25%; }
+.inv-th-stock { width: 15%; }
+.inv-th-status { width: 25%; text-align: right; padding-right: 16px; }
+
+/* Body rows */
+.pos-inventory-row {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pos-inventory-row:last-child {
+  border-bottom: none;
+}
+
+.pos-inventory-row:hover {
+  background-color: #f8fdf6;
+}
+
+.inv-td {
+  padding: 13px 8px;
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.inv-td-name { text-align: left; padding-left: 16px; font-weight: 600; }
+.inv-td-category { }
+.inv-td-stock { font-weight: 600; }
+.inv-td-status { text-align: right; padding-right: 16px; vertical-align: middle; }
+
+.font-bold {
+  font-weight: 600;
+}
+
+/* Badges */
+.inv-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.inv-badge.safe {
+  background-color: #eafbe4;
+  color: #3b9016;
+}
+
+.inv-badge.warning {
+  background-color: #fff8e1;
+  color: #d97706;
+}
+
+.inv-badge.danger {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Custom Scrollbar for the table body to match overall theme */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #dcdcdc;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #c0c0c0;
+}

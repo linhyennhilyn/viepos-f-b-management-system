@@ -1,0 +1,1 @@
+ALTER TYPE transaction_type_enum ADD VALUE IF NOT EXISTS 'EXPORT';

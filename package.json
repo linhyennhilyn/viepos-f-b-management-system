@@ -1,0 +1,10 @@
+{
+  "name": "viepos-f-b-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "cd frontend && pnpm dev",
+    "build:frontend": "cd frontend && pnpm build",
+    "start:backend": "cd backend && ./mvnw spring-boot:run"
+  }
+}

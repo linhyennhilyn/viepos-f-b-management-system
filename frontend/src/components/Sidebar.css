@@ -1,0 +1,215 @@
+.sidebar {
+  width: 200px;
+  background-color: #143D00;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-shrink: 0;
+  position: relative;
+  transition: width 0.3s;
+  z-index: 50; /* ensure it sits above main content for tooltips */
+}
+
+.sidebar.collapsed {
+  width: 64px;
+  overflow: visible;
+}
+
+.sidebar-toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 1.5px solid #3CB018;
+  color: #3CB018;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0;
+}
+
+.sidebar-toggle-btn:hover {
+  background-color: #f0f8ec;
+}
+
+.sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: visible; /* Need this for tooltips to break out */
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+
+.nav-group {
+  position: relative; /* Anchor for absolute tooltips */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: white;
+}
+
+.nav-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.sidebar-nav-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.nav-item:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.nav-item.active {
+  background-color: #3CB018;
+  color: white;
+}
+
+.nav-sub-title {
+  display: none; /* Only visible in collapsed hover state */
+}
+
+.nav-sub-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #143D00; /* Match main sidebar */
+}
+
+.sub-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px 10px 48px;
+  font-size: 0.8rem;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.sub-nav-item:hover {
+  color: #8ed659;
+}
+
+.sub-nav-item.active {
+  color: #3CB018;
+  font-weight: 500;
+}
+
+.sub-nav-indicator {
+  position: absolute;
+  left: 24px;
+  font-size: 0.7rem;
+  color: #3CB018;
+}
+
+.sidebar-footer {
+  padding: 16px 0;
+  background-color: #103300; /* Slightly darker bottom area */
+  overflow: visible;
+}
+
+
+/* --- COLLAPSED STATE STYLES --- */
+
+.sidebar.collapsed .nav-label,
+.sidebar.collapsed .nav-chevron,
+.sidebar.collapsed .nav-sub-menu {
+  display: none; /* Hide default texts and submenus */
+}
+
+.sidebar.collapsed .sidebar-nav {
+  overflow: visible;
+}
+
+.sidebar.collapsed .nav-item {
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.sidebar.collapsed .nav-item-left {
+  gap: 0;
+}
+
+/* Tooltip / Popup on hover when collapsed */
+.sidebar.collapsed .nav-group:hover .nav-label {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 64px;
+  top: 0;
+  height: 100%;
+  background-color: #3CB018;
+  color: white;
+  padding: 0 16px;
+  border-radius: 0 4px 4px 0;
+  white-space: nowrap;
+  font-weight: 600;
+  z-index: 100;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+  pointer-events: none; /* Don't interfere with clicks if no submenu */
+}
+
+.sidebar.collapsed .nav-group:hover .nav-sub-menu {
+  display: flex;
+  position: absolute;
+  left: 64px;
+  top: 0;
+  width: 200px;
+  background-color: #143D00;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.15);
+  z-index: 99;
+  padding: 8px 0;
+}
+
+.sidebar.collapsed .nav-group:has(.nav-sub-menu):hover .nav-label {
+  display: none; /* If we have a submenu, don't show the basic tooltip */
+}
+
+.sidebar.collapsed .nav-sub-title {
+  display: block;
+  padding: 8px 16px 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #3CB018;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 4px;
+}
+
+.sidebar.collapsed .sub-nav-item {
+  padding: 10px 16px 10px 32px; /* Adjust padding for popup menu */
+}
+
+.sidebar.collapsed .sub-nav-indicator {
+  left: 12px;
+}
