@@ -5,6 +5,11 @@
   "scripts": {
     "dev:frontend": "cd frontend && pnpm dev",
     "build:frontend": "cd frontend && pnpm build",
-    "start:backend": "cd backend && ./mvnw spring-boot:run"
+    "start:backend": "cd backend && ./mvnw spring-boot:run",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.95.0"
   }
 }
